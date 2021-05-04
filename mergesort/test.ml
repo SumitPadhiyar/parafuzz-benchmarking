@@ -105,7 +105,7 @@ let merge_sort a b l =
         a
       end in
   let () = Printf.printf "Before mergesort is started!\n" in
-  merge_sort' a b l;
+  ignore @@ merge_sort' a b l;
   let () = Printf.printf "After mergesort is done!\n" in
   T.teardown_pool pool
 
@@ -118,5 +118,5 @@ let test () =
 
 let ()  = 
   Crowbar.(add_test ~name:"Merge Sort" [Crowbar.const 1] (fun _ ->
-  Parafuzz_lib.run test
+    Parafuzz_lib.run test
   ))
