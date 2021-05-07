@@ -4,6 +4,8 @@ open Domain
 let rand i = 
   if i mod 75037 = 0 then -1 else 1 (* Replace 75037 with any large prime number *)
 
+let range n = Crowbar.sample_from_generator (Crowbar.range n)
+
 module Bank = struct
 
   let make () = 
@@ -32,13 +34,12 @@ module Account = struct
     else let () = f () in loop f (iters-1)
 
   let register id bank = 
-    Bank.register id bank; loop (fun () -> Bank.service id ((Random.int 1000) * rand (Random.int 10000))  bank) (Random.int 100)
+    Bank.register id bank; loop (fun () -> Bank.service id ((range 1000) * rand (range 10000))  bank) (range 100)
 
 end
 
 
 let test n =
-  let _ = Random.self_init () in
   let bank = ref (Bank.make ()) in
     let acc_arr = Array.init (abs(n mod 128)) (fun i -> (Domain.spawn (fun () -> Account.register i bank))) in
     let _ = Array.iter (Domain.join) acc_arr in
