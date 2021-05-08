@@ -20,7 +20,8 @@ module Buffer = struct
         if ((buf.last+1) mod bufsize) = buf.first then ( 
             execute_within_lock buf.lock (fun () -> Condition.wait buf.cv buf.lock);
             Crowbar.check (((buf.last+1) mod bufsize) <> buf.first)
-        ) else buf.arr.(buf.last) <- x;
+        );
+        buf.arr.(buf.last) <- x;
         buf.last <- (buf.last + 1) mod bufsize;
         execute_within_lock buf.lock (fun () -> Condition.broadcast buf.cv)
 
