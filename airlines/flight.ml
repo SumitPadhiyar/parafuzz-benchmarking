@@ -6,7 +6,7 @@ type dst = String.t
 
 type ticket = FlightTicket.t ref
 
-type t = id * src * dst * ticket list
+type t = id * src * dst * (ticket list)
 
 let make id src dst size = 
   let tickets = List.init size (fun i -> (ref (FlightTicket.make i)) ) in
@@ -14,8 +14,8 @@ let make id src dst size =
 
 let getFreeSeats (id, src, dst, tickets) = 
   let f acc ticket = 
-    match !ticket with begin
-    | Free (x) -> List.append acc [x]
+    match !ticket with
+    | FlightTicket.Free (x) -> List.append acc [ticket]
     | _ -> acc 
-    end in
+    in
   List.fold_left f [] tickets    
