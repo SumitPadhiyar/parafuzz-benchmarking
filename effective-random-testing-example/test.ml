@@ -1,14 +1,19 @@
 module Crowbar = Parafuzz_lib.Crowbar
 
+let rec write f i max = 
+    if i <= max then (f i; write f (i+1) max)
+    else ()
+
 let test () = 
+    let max = 30 in
     let x = Atomic.make 0 in
     let y = Atomic.make 0 in
-    let dom = Domain.spawn(fun () -> Crowbar.check @@ not (Atomic.get x = 4)) in
-    Atomic.set y 1;
-    Atomic.set y 2;
-    Atomic.set y 3;
-    Atomic.set x 4;
-    Domain.join dom
+    let d1 = Domain.spawn(fun () -> write (Atomic.set x) 1 max) in
+    let d2 = Domain.spawn(fun () -> write (Atomic.set y) 1 max) in
+    Crowbar.check @@ (Atomic.get x <> (max-1)  && Atomic.get y <> (max-1));
+    Domain.join d1;
+    Domain.join d2
+
 
 let ()  = 
 	Crowbar.(add_test ~name:"Basic interleaving test" [Crowbar.const 1] (fun _ ->
