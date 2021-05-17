@@ -1,37 +1,35 @@
 module Crowbar = Parafuzz_lib.Crowbar
 open Domain
 
-let execute_within_lock lock f = 
-        Mutex.lock lock;
-        f ();
-        Mutex.unlock lock
-
-let items_produced = 2
+let items_produced = 10
 
 module Buffer = struct
 
-    let bufsize = 2
+    let bufsize = (items_produced * 2 ) - 1
 
     type t = {mutable first : int; mutable last : int; arr : int Array.t; lock: Mutex.t; cv: Condition.t}
     
     let create () = { first = 0; last = 0; arr = Array.make bufsize 0; lock = Mutex.create (); cv = Condition.create ()}
 
     let enq buf x =
+        Mutex.lock buf.lock;
         if ((buf.last+1) mod bufsize) = buf.first then ( 
-            execute_within_lock buf.lock (fun () -> Condition.wait buf.cv buf.lock);
-            Crowbar.check (((buf.last+1) mod bufsize) <> buf.first)
+            Condition.wait buf.cv buf.lock;
         );
         buf.arr.(buf.last) <- x;
         buf.last <- (buf.last + 1) mod bufsize;
-        execute_within_lock buf.lock (fun () -> Condition.broadcast buf.cv)
+        Condition.broadcast buf.cv;
+        Mutex.unlock buf.lock
 
     let deq buf =
+        Mutex.lock buf.lock;
         while buf.first = buf.last do
-            execute_within_lock buf.lock (fun () -> Condition.wait buf.cv buf.lock)
+            Condition.wait buf.cv buf.lock;
         done;
         let v = buf.arr.(buf.first) in
         buf.first <- (buf.first + 1) mod bufsize;
-        execute_within_lock buf.lock (fun () -> Condition.broadcast buf.cv);
+        Condition.broadcast buf.cv;
+        Mutex.unlock buf.lock;
         v
 
 end
