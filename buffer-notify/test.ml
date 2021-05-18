@@ -1,37 +1,37 @@
 module Crowbar = Parafuzz_lib.Crowbar
 open Domain
 
-let execute_within_lock lock f = 
-        Mutex.lock lock;
-        f ();
-        Mutex.unlock lock
-
 let items_produced = 2
 
 module Buffer = struct
 
-    let bufsize = 2
+    let bufsize = ref 0
 
     type t = {mutable first : int; mutable last : int; arr : int Array.t; lock: Mutex.t; cv: Condition.t}
     
-    let create () = { first = 0; last = 0; arr = Array.make bufsize 0; lock = Mutex.create (); cv = Condition.create ()}
+    let create size = 
+        bufsize := size;
+        { first = 0; last = 0; arr = Array.make !bufsize 0; lock = Mutex.create (); cv = Condition.create ()}
 
     let enq buf x =
-        while ((buf.last+1) mod bufsize) = buf.first do
-            execute_within_lock buf.lock (fun () -> Condition.wait buf.cv buf.lock);
-            Crowbar.check (((buf.last+1) mod bufsize) <> buf.first)
+        Mutex.lock buf.lock;
+        while ((buf.last+1) mod !bufsize) = buf.first do
+            Condition.wait buf.cv buf.lock
         done;
         buf.arr.(buf.last) <- x;
-        buf.last <- (buf.last + 1) mod bufsize;
-        execute_within_lock buf.lock (fun () -> Condition.signal buf.cv)
+        buf.last <- (buf.last + 1) mod !bufsize;
+        Condition.signal buf.cv;
+        Mutex.unlock buf.lock
 
     let deq buf =
+        Mutex.lock buf.lock;
         while buf.first = buf.last do
-            execute_within_lock buf.lock (fun () -> Condition.wait buf.cv buf.lock)
+            Condition.wait buf.cv buf.lock
         done;
         let v = buf.arr.(buf.first) in
-        buf.first <- (buf.first + 1) mod bufsize;
-        execute_within_lock buf.lock (fun () -> Condition.signal buf.cv);
+        buf.first <- (buf.first + 1) mod !bufsize;
+        Condition.signal buf.cv;
+        Mutex.unlock buf.lock;
         v
 
 end
@@ -57,8 +57,8 @@ let consumer buf =
     loop 0
 
 
-let test () = 
-    let buf = Buffer.create () in
+let test size = function () -> 
+    let buf = Buffer.create size in
     let p1 = Domain.spawn (fun () -> producer buf 1) in
     let p2 = Domain.spawn (fun () -> producer buf 2) in
     let p3 = Domain.spawn (fun () -> consumer buf) in
@@ -67,7 +67,8 @@ let test () =
     Domain.join p3
 
 let ()  = 
-	Crowbar.(add_test ~name:"BufferNotify test" [Crowbar.const 1] (fun _ ->
-		Parafuzz_lib.run test
+    Crowbar.(add_test ~name:"BufferNotify test" [Crowbar.int] (fun i ->
+       let size = if i = 130 then 2 else 3 in
+        Parafuzz_lib.run @@ test size
 	))
 
