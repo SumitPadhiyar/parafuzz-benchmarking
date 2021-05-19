@@ -47,11 +47,11 @@ let list_pop_front cl =
     Mutex.unlock cl.lock;
     !ret
 
-let process cl = 
+let process cl =
     let value = list_pop_front cl in
     if Option.is_some value then list_push_back cl (Option.get value + 10)
 
-let test () = 
+let test i = function () ->
     let cl = create () in
     let rec add_elem i = 
         match i < 10 with
@@ -60,7 +60,7 @@ let test () =
     in
     add_elem 0;
     let d1 = Domain.spawn (fun () -> process cl) in
-    let d2 = Domain.spawn (fun () -> process cl ) in
+    let d2 = Domain.spawn (fun () ->  if i = 130 then process cl ) in
     Domain.join d1;
     Domain.join d2;
     
@@ -74,6 +74,6 @@ let test () =
     iterate (cl.head) (-1)
 
 let ()  = 
-	Crowbar.(add_test ~name:"Circular list test" [Crowbar.const 1] (fun _ ->
-		Parafuzz_lib.run test
+	Crowbar.(add_test ~name:"Circular list test" [Crowbar.int] (fun i ->
+		Parafuzz_lib.run @@ test i
 	))
