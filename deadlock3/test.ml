@@ -6,34 +6,33 @@ let b = Domain.Mutex.create ()
 let c = Domain.Mutex.create ()
 
 let run order = 
-    if order = 0 then (
+    if order = 12 then (
         Mutex.lock a;
         Mutex.lock b;
         Mutex.unlock b;
         Mutex.unlock a;
-    )
-    else if order = 1 then (
+    ) else if order = 24 then (
         Mutex.lock b;
         Mutex.lock c;
         Mutex.unlock c;
         Mutex.unlock b;
-    )
-    else (
+    ) else if order = 36 then (
         Mutex.lock c;
         Mutex.lock a;
         Mutex.unlock a;
         Mutex.unlock c;
     )
 
-let test () = 
-    let d1 = Domain.spawn (fun () -> run 0 ) in
-    let d2 = Domain.spawn (fun () -> run 1 ) in
-    let d3 = Domain.spawn (fun () -> run 2 ) in
+let test i j k = function () ->
+    let d1 = Domain.spawn (fun () -> run i ) in
+    let d2 = Domain.spawn (fun () -> run j ) in
+    let d3 = Domain.spawn (fun () -> run k ) in
     Domain.join d1;
     Domain.join d2;
     Domain.join d3
 
 let ()  = 
-	Crowbar.(add_test ~name:"Deadlock3 test" [Crowbar.const 1] (fun _ ->
-		Parafuzz_lib.run test
+    let max = 1000 in
+    Crowbar.(add_test ~name:"Deadlock3 test" [Crowbar.range max; Crowbar.range max; Crowbar.range max ] (fun i j k ->
+		Parafuzz_lib.run @@ test i j k 
 	))
