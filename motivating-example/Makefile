@@ -1,7 +1,7 @@
 .PHONY: build clean afl random afli stress_build stress
 
 stress: 
-	timeout --foreground 1h ./stress_test.out -i || true
+	date; timeout --foreground 1h ./stress_test.out -i || true; echo ""; date
 
 build:
 	ocamlfind opt -linkpkg -package parafuzz-lib test.ml -o test.out
@@ -22,7 +22,7 @@ afli:
 	timeout --foreground 1h  afl-fuzz -m none -i ip -o op/ ./test.out @@ || true
 
 random: 
-	date; timeout --foreground 1h ./test.out -i; echo ""; date
+	date; timeout --foreground 1h ./test.out -i || true; echo ""; date
 
 clean:
 	rm -rf op/ *.cm* *.o *.out
