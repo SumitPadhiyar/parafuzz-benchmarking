@@ -1,0 +1,33 @@
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 12:31:52 IST 2021
+
+Tue Jun 22 13:31:52 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 13:31:52 IST 2021
+
+Tue Jun 22 14:31:52 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 14:31:52 IST 2021
+BufferIf test: FAIL
+
+When given the input:
+
+    ?
+    
+the test threw an exception:
+
+    Failure("Deadlock!")
+    Raised at file "stdlib.ml", line 29, characters 17-33
+    Called from file "lib/crowbar.ml", line 355, characters 16-19
+    
+36197854 tests passed before first failure
+
+Tue Jun 22 15:22:17 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 15:22:17 IST 2021
+
+Tue Jun 22 16:22:17 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 16:22:17 IST 2021
+
+Tue Jun 22 17:22:17 IST 2021
