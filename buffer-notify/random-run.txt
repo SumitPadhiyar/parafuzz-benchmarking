@@ -1,0 +1,20 @@
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 14:56:11 IST 2021
+
+Tue Jun 22 15:56:11 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 15:56:11 IST 2021
+
+Tue Jun 22 16:56:11 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 16:56:11 IST 2021
+
+Tue Jun 22 17:56:11 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 17:56:11 IST 2021
+
+Tue Jun 22 18:56:11 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jun 22 18:56:11 IST 2021
+
+Tue Jun 22 19:56:11 IST 2021
