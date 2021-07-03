@@ -1,0 +1,542 @@
+10 1
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+81 tests passed before first failure
+
+Thu Jun 24 00:20:46 IST 2021
+----------------------
+
+10 2
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+35 tests passed before first failure
+
+Thu Jun 24 00:20:46 IST 2021
+----------------------
+
+10 3
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+236 tests passed before first failure
+
+Thu Jun 24 00:20:46 IST 2021
+----------------------
+
+10 4
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+133 tests passed before first failure
+
+Thu Jun 24 00:20:46 IST 2021
+----------------------
+
+10 5
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+32 tests passed before first failure
+
+Thu Jun 24 00:20:46 IST 2021
+----------------------
+
+20 1
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+3931 tests passed before first failure
+
+Thu Jun 24 00:20:46 IST 2021
+----------------------
+
+20 2
+Thu Jun 24 00:20:46 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+418 tests passed before first failure
+
+Thu Jun 24 00:20:47 IST 2021
+----------------------
+
+20 3
+Thu Jun 24 00:20:47 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+7124 tests passed before first failure
+
+Thu Jun 24 00:20:47 IST 2021
+----------------------
+
+20 4
+Thu Jun 24 00:20:47 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+1225 tests passed before first failure
+
+Thu Jun 24 00:20:47 IST 2021
+----------------------
+
+20 5
+Thu Jun 24 00:20:47 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+1122 tests passed before first failure
+
+Thu Jun 24 00:20:47 IST 2021
+----------------------
+
+30 1
+Thu Jun 24 00:20:47 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+206533 tests passed before first failure
+
+Thu Jun 24 00:20:57 IST 2021
+----------------------
+
+30 2
+Thu Jun 24 00:20:57 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+79798 tests passed before first failure
+
+Thu Jun 24 00:21:00 IST 2021
+----------------------
+
+30 3
+Thu Jun 24 00:21:00 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+115075 tests passed before first failure
+
+Thu Jun 24 00:21:06 IST 2021
+----------------------
+
+30 4
+Thu Jun 24 00:21:06 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+123630 tests passed before first failure
+
+Thu Jun 24 00:21:11 IST 2021
+----------------------
+
+30 5
+Thu Jun 24 00:21:11 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+12133 tests passed before first failure
+
+Thu Jun 24 00:21:12 IST 2021
+----------------------
+
+40 1
+Thu Jun 24 00:21:12 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+1072300 tests passed before first failure
+
+Thu Jun 24 00:22:06 IST 2021
+----------------------
+
+40 2
+Thu Jun 24 00:22:06 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+48188 tests passed before first failure
+
+Thu Jun 24 00:22:09 IST 2021
+----------------------
+
+40 3
+Thu Jun 24 00:22:09 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+11904193 tests passed before first failure
+
+Thu Jun 24 00:32:03 IST 2021
+----------------------
+
+40 4
+Thu Jun 24 00:32:03 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+572339 tests passed before first failure
+
+Thu Jun 24 00:32:32 IST 2021
+----------------------
+
+40 5
+Thu Jun 24 00:32:32 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+8298720 tests passed before first failure
+
+Thu Jun 24 00:39:27 IST 2021
+----------------------
+
+50 1
+Thu Jun 24 00:39:27 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+65220189 tests passed before first failure
+
+Thu Jun 24 01:37:51 IST 2021
+----------------------
+
+50 2
+Thu Jun 24 01:37:51 IST 2021
+
+Thu Jun 24 02:37:51 IST 2021
+----------------------
+
+50 3
+Thu Jun 24 02:37:51 IST 2021
+Large schedule space test: FAIL
+
+When given the input:
+
+    ?
+    
+the test failed:
+
+    check false
+    
+10854239 tests passed before first failure
+
+Thu Jun 24 02:47:36 IST 2021
+----------------------
+
+50 4
+Thu Jun 24 02:47:36 IST 2021
+
+Thu Jun 24 03:47:36 IST 2021
+----------------------
+
+50 5
+Thu Jun 24 03:47:36 IST 2021
+
+Thu Jun 24 04:47:36 IST 2021
+----------------------
+
+60 1
+Thu Jun 24 04:47:36 IST 2021
+
+Thu Jun 24 05:47:36 IST 2021
+----------------------
+
+60 2
+Thu Jun 24 05:47:36 IST 2021
+
+Thu Jun 24 06:47:36 IST 2021
+----------------------
+
+60 3
+Thu Jun 24 06:47:36 IST 2021
+
+Thu Jun 24 07:47:36 IST 2021
+----------------------
+
+60 4
+Thu Jun 24 07:47:36 IST 2021
+
+Thu Jun 24 08:47:36 IST 2021
+----------------------
+
+60 5
+Thu Jun 24 08:47:36 IST 2021
+
+Thu Jun 24 09:47:36 IST 2021
+----------------------
+
+70 1
+Thu Jun 24 09:47:36 IST 2021
+
+Thu Jun 24 10:47:36 IST 2021
+----------------------
+
+70 2
+Thu Jun 24 10:47:36 IST 2021
+
+Thu Jun 24 11:47:36 IST 2021
+----------------------
+
+70 3
+Thu Jun 24 11:47:36 IST 2021
+
+Thu Jun 24 12:47:36 IST 2021
+----------------------
+
+70 4
+Thu Jun 24 12:47:36 IST 2021
+
+Thu Jun 24 13:47:36 IST 2021
+----------------------
+
+70 5
+Thu Jun 24 13:47:36 IST 2021
+
+Thu Jun 24 14:47:36 IST 2021
+----------------------
+
+80 1
+Thu Jun 24 14:47:36 IST 2021
+
+Thu Jun 24 15:47:36 IST 2021
+----------------------
+
+80 2
+Thu Jun 24 15:47:36 IST 2021
+
+Thu Jun 24 16:47:36 IST 2021
+----------------------
+
+80 3
+Thu Jun 24 16:47:36 IST 2021
+
+Thu Jun 24 17:47:36 IST 2021
+----------------------
+
+80 4
+Thu Jun 24 17:47:36 IST 2021
+
+Thu Jun 24 18:47:36 IST 2021
+----------------------
+
+80 5
+Thu Jun 24 18:47:36 IST 2021
+
+Thu Jun 24 19:47:36 IST 2021
+----------------------
+
+90 1
+Thu Jun 24 19:47:36 IST 2021
+
+Thu Jun 24 20:47:36 IST 2021
+----------------------
+
+90 2
+Thu Jun 24 20:47:36 IST 2021
+
+Thu Jun 24 21:47:36 IST 2021
+----------------------
+
+90 3
+Thu Jun 24 21:47:36 IST 2021
+
+Thu Jun 24 22:47:36 IST 2021
+----------------------
+
+90 4
+Thu Jun 24 22:47:36 IST 2021
+
+Thu Jun 24 23:47:36 IST 2021
+----------------------
+
+90 5
+Thu Jun 24 23:47:36 IST 2021
+
+Fri Jun 25 00:47:36 IST 2021
+----------------------
+
+100 1
+Fri Jun 25 00:47:36 IST 2021
+
+Fri Jun 25 01:47:36 IST 2021
+----------------------
+
+100 2
+Fri Jun 25 01:47:36 IST 2021
+
+Fri Jun 25 02:47:36 IST 2021
+----------------------
+
+100 3
+Fri Jun 25 02:47:36 IST 2021
+
+Fri Jun 25 03:47:36 IST 2021
+----------------------
+
+100 4
+Fri Jun 25 03:47:36 IST 2021
+
+Fri Jun 25 04:47:36 IST 2021
+----------------------
+
+100 5
+Fri Jun 25 04:47:36 IST 2021
+
+Fri Jun 25 05:47:36 IST 2021
+----------------------
+
