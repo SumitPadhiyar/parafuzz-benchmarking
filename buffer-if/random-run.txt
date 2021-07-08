@@ -1,13 +1,5 @@
 date; timeout --foreground 1h ./test.out -i || true; echo ""; date
-Tue Jun 22 12:31:52 IST 2021
-
-Tue Jun 22 13:31:52 IST 2021
-date; timeout --foreground 1h ./test.out -i || true; echo ""; date
-Tue Jun 22 13:31:52 IST 2021
-
-Tue Jun 22 14:31:52 IST 2021
-date; timeout --foreground 1h ./test.out -i || true; echo ""; date
-Tue Jun 22 14:31:52 IST 2021
+Mon Jul  5 22:34:35 IST 2021
 BufferIf test: FAIL
 
 When given the input:
@@ -20,14 +12,107 @@ the test threw an exception:
     Raised at file "stdlib.ml", line 29, characters 17-33
     Called from file "lib/crowbar.ml", line 355, characters 16-19
     
-36197854 tests passed before first failure
+3060142 tests passed before first failure
 
-Tue Jun 22 15:22:17 IST 2021
+Mon Jul  5 22:38:42 IST 2021
 date; timeout --foreground 1h ./test.out -i || true; echo ""; date
-Tue Jun 22 15:22:17 IST 2021
+Mon Jul  5 22:38:42 IST 2021
 
-Tue Jun 22 16:22:17 IST 2021
+Mon Jul  5 23:38:42 IST 2021
 date; timeout --foreground 1h ./test.out -i || true; echo ""; date
-Tue Jun 22 16:22:17 IST 2021
+Mon Jul  5 23:38:42 IST 2021
 
-Tue Jun 22 17:22:17 IST 2021
+Tue Jul  6 00:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 00:38:42 IST 2021
+
+Tue Jul  6 01:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 01:38:42 IST 2021
+
+Tue Jul  6 02:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 02:38:42 IST 2021
+
+Tue Jul  6 03:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 03:38:42 IST 2021
+
+Tue Jul  6 04:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 04:38:42 IST 2021
+
+Tue Jul  6 05:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 05:38:42 IST 2021
+
+Tue Jul  6 06:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 06:38:42 IST 2021
+
+Tue Jul  6 07:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 07:38:42 IST 2021
+
+Tue Jul  6 08:38:42 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 08:38:43 IST 2021
+
+Tue Jul  6 09:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 09:38:43 IST 2021
+
+Tue Jul  6 10:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 10:38:43 IST 2021
+
+Tue Jul  6 11:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 11:38:43 IST 2021
+
+Tue Jul  6 12:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 12:38:43 IST 2021
+
+Tue Jul  6 13:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 13:38:43 IST 2021
+
+Tue Jul  6 14:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 14:38:43 IST 2021
+
+Tue Jul  6 15:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 15:38:43 IST 2021
+
+Tue Jul  6 16:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 16:38:43 IST 2021
+
+Tue Jul  6 17:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 17:38:43 IST 2021
+
+Tue Jul  6 18:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 18:38:43 IST 2021
+
+Tue Jul  6 19:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 19:38:43 IST 2021
+
+Tue Jul  6 20:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 20:38:43 IST 2021
+
+Tue Jul  6 21:38:43 IST 2021
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Tue Jul  6 21:38:43 IST 2021
+
+Tue Jul  6 22:38:43 IST 2021
+
+date; timeout --foreground 1h ./test.out -i || true; echo ""; date
+Thu Jul  8 18:17:03 IST 2021
+44580000
+Thu Jul  8 19:17:03 IST 2021
